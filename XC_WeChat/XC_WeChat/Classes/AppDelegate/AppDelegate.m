@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XCMainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UIViewController alloc] init];
+    self.window.rootViewController = [[XCMainTabBarController alloc] init];
     [self.window makeKeyAndVisible];
     
     return YES;

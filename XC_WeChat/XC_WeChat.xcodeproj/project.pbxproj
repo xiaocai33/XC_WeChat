@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3337985E1D7827A9001CE7FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3337985D1D7827A9001CE7FB /* main.m */; };
-		333798611D7827A9001CE7FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333798601D7827A9001CE7FB /* AppDelegate.m */; };
 		333798691D7827A9001CE7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333798681D7827A9001CE7FB /* Assets.xcassets */; };
 		3337986C1D7827A9001CE7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3337986A1D7827A9001CE7FB /* LaunchScreen.storyboard */; };
 		333798771D7827A9001CE7FB /* XC_WeChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333798761D7827A9001CE7FB /* XC_WeChatTests.m */; };
 		333798821D7827A9001CE7FB /* XC_WeChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333798811D7827A9001CE7FB /* XC_WeChatUITests.m */; };
+		333798A71D7829B9001CE7FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3337989C1D7829B9001CE7FB /* AppDelegate.m */; };
+		333798A81D7829B9001CE7FB /* XCMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333798A41D7829B9001CE7FB /* XCMainTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,6 @@
 /* Begin PBXFileReference section */
 		333798591D7827A8001CE7FB /* XC_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XC_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3337985D1D7827A9001CE7FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3337985F1D7827A9001CE7FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		333798601D7827A9001CE7FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		333798681D7827A9001CE7FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3337986B1D7827A9001CE7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3337986D1D7827A9001CE7FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +45,10 @@
 		3337987D1D7827A9001CE7FB /* XC_WeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XC_WeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333798811D7827A9001CE7FB /* XC_WeChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XC_WeChatUITests.m; sourceTree = "<group>"; };
 		333798831D7827A9001CE7FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3337989B1D7829B9001CE7FB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3337989C1D7829B9001CE7FB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		333798A31D7829B9001CE7FB /* XCMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCMainTabBarController.h; sourceTree = "<group>"; };
+		333798A41D7829B9001CE7FB /* XCMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCMainTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +99,8 @@
 		3337985B1D7827A8001CE7FB /* XC_WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				3337985F1D7827A9001CE7FB /* AppDelegate.h */,
-				333798601D7827A9001CE7FB /* AppDelegate.m */,
+				333798991D7829B9001CE7FB /* Classes */,
+				333798961D7829B2001CE7FB /* Other */,
 				3337985C1D7827A9001CE7FB /* Supporting Files */,
 			);
 			path = XC_WeChat;
@@ -130,6 +133,112 @@
 				333798831D7827A9001CE7FB /* Info.plist */,
 			);
 			path = XC_WeChatUITests;
+			sourceTree = "<group>";
+		};
+		333798961D7829B2001CE7FB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				333798971D7829B2001CE7FB /* Resources */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		333798971D7829B2001CE7FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				333798981D7829B2001CE7FB /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		333798981D7829B2001CE7FB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		333798991D7829B9001CE7FB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3337989A1D7829B9001CE7FB /* AppDelegate */,
+				3337989D1D7829B9001CE7FB /* Common(通用) */,
+				3337989E1D7829B9001CE7FB /* Contacts(联系人) */,
+				3337989F1D7829B9001CE7FB /* Discover(发现) */,
+				333798A01D7829B9001CE7FB /* Home(主页) */,
+				333798A11D7829B9001CE7FB /* Lib(第三方库) */,
+				333798A21D7829B9001CE7FB /* MainFrame(主框架) */,
+				333798A51D7829B9001CE7FB /* Me(我) */,
+				333798A61D7829B9001CE7FB /* utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3337989A1D7829B9001CE7FB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3337989B1D7829B9001CE7FB /* AppDelegate.h */,
+				3337989C1D7829B9001CE7FB /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3337989D1D7829B9001CE7FB /* Common(通用) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Common(通用)";
+			sourceTree = "<group>";
+		};
+		3337989E1D7829B9001CE7FB /* Contacts(联系人) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Contacts(联系人)";
+			sourceTree = "<group>";
+		};
+		3337989F1D7829B9001CE7FB /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		333798A01D7829B9001CE7FB /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		333798A11D7829B9001CE7FB /* Lib(第三方库) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Lib(第三方库)";
+			sourceTree = "<group>";
+		};
+		333798A21D7829B9001CE7FB /* MainFrame(主框架) */ = {
+			isa = PBXGroup;
+			children = (
+				333798A31D7829B9001CE7FB /* XCMainTabBarController.h */,
+				333798A41D7829B9001CE7FB /* XCMainTabBarController.m */,
+			);
+			path = "MainFrame(主框架)";
+			sourceTree = "<group>";
+		};
+		333798A51D7829B9001CE7FB /* Me(我) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Me(我)";
+			sourceTree = "<group>";
+		};
+		333798A61D7829B9001CE7FB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333798611D7827A9001CE7FB /* AppDelegate.m in Sources */,
+				333798A71D7829B9001CE7FB /* AppDelegate.m in Sources */,
 				3337985E1D7827A9001CE7FB /* main.m in Sources */,
+				333798A81D7829B9001CE7FB /* XCMainTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
