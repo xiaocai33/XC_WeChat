@@ -8,33 +8,44 @@
 
 #import "XCMainTabBarController.h"
 
+#import "XCHomeTableViewController.h"
+#import "XCContactsTableViewController.h"
+#import "XCDiscoverTableViewController.h"
+#import "XCMeTableViewController.h"
+
 @implementation XCMainTabBarController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    //NSArray *array = @[];
+    
+    [self addItemController:[[XCHomeTableViewController alloc] init] title:@"微信" image:@"tabbar_mainframe" selectedImage:@"tabbar_mainframeHL"];
+    [self addItemController:[[XCContactsTableViewController alloc] init] title:@"通讯录" image:@"tabbar_contacts" selectedImage:@"tabbar_contactsHL"];
+    [self addItemController:[[XCDiscoverTableViewController alloc] init] title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discoverHL"];
+    [self addItemController:[[XCMeTableViewController alloc] init] title:@"我" image:@"tabbar_me" selectedImage:@"tabbar_meHL"];
 
+}
+
+- (void)addItemController:(UIViewController *)vc title:(NSString *)title image:(NSString *)imageName selectedImage:(NSString *)selectedImage{
+    vc.title = title;
     
-    UIViewController *vc1 = [[UIViewController alloc] init];
-    vc1.view.backgroundColor = [UIColor greenColor];
-    vc1.tabBarItem.title = @"vc1";
-    [self addChildViewController:vc1];
+    //设置默认文字效果
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    [vc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     
-    UIViewController *vc2 = [[UIViewController alloc] init];
-    vc2.view.backgroundColor = [UIColor grayColor];
-    vc2.tabBarItem.title = @"vc2";
-    [self addChildViewController:vc2];
+    //设置选中文字效果
+    NSMutableDictionary *selectedTextAttrs = [NSMutableDictionary dictionary];
+    selectedTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0 green:(190)/255.0 blue:(12)/255.0 alpha:1.0];
+    [vc.tabBarItem setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
     
-    UIViewController *vc3 = [[UIViewController alloc] init];
-    vc3.view.backgroundColor = [UIColor blueColor];
-    vc3.tabBarItem.title = @"vc3";
-    [self addChildViewController:vc3];
+    //设置图片效果
+    vc.tabBarItem.image = [UIImage imageNamed:imageName];
+    vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    UIViewController *vc4 = [[UIViewController alloc] init];
-    vc4.view.backgroundColor = [UIColor redColor];
-    vc4.tabBarItem.title = @"vc4";
-    [self addChildViewController:vc4];
+    //包装导航控制器
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 
 @end
